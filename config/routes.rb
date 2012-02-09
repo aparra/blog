@@ -8,6 +8,6 @@ Blog::Application.routes.draw do
   resources :users
   resource :session
   
-  match '/login' => "session#new", as => "login"
-  match '/logout' => 'session#destroy', as => "logout"
+  match '/login' => "sessions#new", :as => "login"
+  match '/logout' => 'sessions#destroy', :as => "logout"
 end
