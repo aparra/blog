@@ -7,12 +7,12 @@ class CommentsController < ApplicationController
     
     if @comment.save
       respond_to do |format|
-        format.html { redirect_to @article, :notice => 'Thanks for you comment' }
+        format.html { redirect_to @article, :notice => t('comments.create_success')}
         format.js
       end
     else
       respond_to do |format|
-        format.html { redirect_to @article, :alert => 'Unable to add comment' }
+        format.html { redirect_to @article, :alert => t('comments.create_failure') }
         format.js { render 'fail_create.js.erb' }
       end
     end
@@ -24,7 +24,7 @@ class CommentsController < ApplicationController
     @comment.destroy
     
     respond_to do |format|
-      format.html { redirect_to @article, :notice => 'Comment deleted' }
+      format.html { redirect_to @article, :notice => t('comments.destroy_success') }
       format.js
     end
   end

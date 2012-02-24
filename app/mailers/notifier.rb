@@ -6,7 +6,7 @@ class Notifier < ActionMailer::Base
     @sender_name = sender_name
     
     attachments["rails.png"] = File.read(Rails.root.join("app/assets/images/rails.png"))
-    mail :to => receiver_email, :subject => 'Interesting Article'
+    mail :to => receiver_email, :subject => I18n.t('notifier.interesting_article')
   end
   
   def comment_added(comment)
