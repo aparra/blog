@@ -7,7 +7,10 @@
 				<%= link_to t('general.delete'), article, :confirm => t('general.are_you_sure'), :method => :delete %>
 			</span>
 		<% end %>	
+		<% if article.tag_list.present? %>
+			<smal>Tags: <%= article.tag_list %></smal>
+		<% end %>
 	</h3>
 	
-	<%= simple_format article.body %>
+	<%= simple_format raw(article.body) %>
 <% end %>
