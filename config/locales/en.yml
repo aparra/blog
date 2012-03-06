@@ -19,7 +19,7 @@ en:
   application:
     access_denied: Please log in to continue
   categories:
-    caterories: Categories
+    categories: Categories
   articles:
     editing_article: Editing article
     lining_article: Listing articles

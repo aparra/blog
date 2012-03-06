@@ -19,7 +19,7 @@
     <%= f.label :location %><br />
     <%= f.text_field :location %>
   </div>
-	<div>
+	<div class="field">
 		<%= f.label t('categories.categories') %><br />
 		<% for category in Category.all %>
 			<%= check_box_tag 'article[category_ids][]', category.id, @article.category_ids.include?(category.id), 
@@ -34,6 +34,10 @@
   <div class="field">
     <%= f.label :body %><br />
     <%= f.text_area :body %>
+  </div>
+  <div class="field">
+    <%= f.label :tag_list %><br />
+    <%= f.text_field :tag_list %>
   </div>
   <div class="field">
     <%= f.label :published_at %><br />
