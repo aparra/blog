@@ -18,8 +18,9 @@
 				<% else %>
 					<%= link_to t('sessions.login'), login_path %>
 				<% end %>
-			<div>
-		<div>
+			</div>
+			<%= render 'articles/search' %>
+		</div>
 		<div id="main">
 			<%= content_tag :p, notice, :class => 'notice' if notice.present? %>
 			<%= content_tag :p, alert, :class => 'alert' if alert.present? %>
